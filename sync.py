@@ -172,13 +172,13 @@ try:
 except Exception as e:
     error_out(f'Unable to sync files: {e}')
 
-logging.debug('Unmounting iPhone ...')
-try:
-     ret = call(f'fusermount -u {dst_folder}', shell=True)
-     if ret != 0:
-         raise Exception(f'fusermount returned {ret}')
-except Exception as e:
-    error_out(f'Unable to unmount iPhone: {e}')
+# logging.debug('Unmounting iPhone ...')
+# try:
+#      ret = call(f'fusermount -u {dst_folder}', shell=True)
+#      if ret != 0:
+#          raise Exception(f'fusermount returned {ret}')
+# except Exception as e:
+#     error_out(f'Unable to unmount iPhone: {e}')
 
 logging.info('Sync complete.')
 exit()
